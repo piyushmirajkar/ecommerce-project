@@ -38,7 +38,7 @@ const salesCategory = {
   soft: '#fef3c7',
 }
 
-export default function Sales({ setPage }) {
+export default function Sales({ setPage, onAddToCart }) {
   return (
     <section className="feature-page">
       <div className="feature-banner" style={{ '--page-accent': salesCategory.accent, '--page-soft': salesCategory.soft }}>
@@ -64,7 +64,7 @@ export default function Sales({ setPage }) {
                   <strong>{product.price}</strong>
                   <span className="old-price">{product.originalPrice}</span>
                 </div>
-                <button type="button">Add to cart</button>
+                <button type="button" onClick={() => onAddToCart(product)}>Add to cart</button>
               </div>
             </div>
           </article>

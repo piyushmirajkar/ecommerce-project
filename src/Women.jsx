@@ -76,7 +76,7 @@ const womenCategory = {
   soft: '#fce7f3',
 }
 
-export default function Women({ setPage }) {
+export default function Women({ setPage, onAddToCart }) {
   return (
     <section className="feature-page">
       <div className="feature-banner" style={{ '--page-accent': womenCategory.accent, '--page-soft': womenCategory.soft }}>
@@ -99,7 +99,7 @@ export default function Women({ setPage }) {
               <h3>{product.name}</h3>
               <div className="product-meta">
                 <strong>{product.price}</strong>
-                <button type="button">Add to cart</button>
+                <button type="button" onClick={() => onAddToCart(product)}>Add to cart</button>
               </div>
             </div>
           </article>

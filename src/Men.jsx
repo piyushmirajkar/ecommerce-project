@@ -76,7 +76,7 @@ const menCategory = {
   soft: '#dbeafe',
 }
 
-export default function Men({ setPage }) {
+export default function Men({ setPage, onAddToCart }) {
   return (
     <section className="feature-page">
       <div className="feature-banner" style={{ '--page-accent': menCategory.accent, '--page-soft': menCategory.soft }}>
@@ -99,7 +99,7 @@ export default function Men({ setPage }) {
               <h3>{product.name}</h3>
               <div className="product-meta">
                 <strong>{product.price}</strong>
-                <button type="button">Add to cart</button>
+                <button type="button" onClick={() => onAddToCart(product)}>Add to cart</button>
               </div>
             </div>
           </article>

@@ -25,7 +25,7 @@ const saleBanner = {
   button: 'Shop all deals',
 }
 
-export default function Home({ setPage }) {
+export default function Home({ setPage, onAddToCart }) {
   return (
     <>
       <section className="hero" id="home">
@@ -139,7 +139,7 @@ export default function Home({ setPage }) {
                 <h3>{product.name}</h3>
                 <div className="product-meta">
                   <strong>{product.price}</strong>
-                  <button type="button">Add to cart</button>
+                  <button type="button" onClick={() => onAddToCart(product)}>Add to cart</button>
                 </div>
               </div>
             </article>
